@@ -1,0 +1,40 @@
+# --- Python environments (large) ---
+.venv/
+venv/
+env/
+.conda/
+
+# --- Python caches (numba's compiled-kernel cache lives in __pycache__ too) ---
+__pycache__/
+*.py[cod]
+*.nbi
+*.nbc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# --- OS / editor files ---
+.DS_Store
+__MACOSX/
+.idea/
+.vscode/
+*.swp
+
+# --- run artefacts ---
+logs/
+*.log
+nohup.out
+*.zip
+/tmp/
+
+# --- generated training data and models (can be large; regenerate or store elsewhere) ---
+results/demos/
+checkpoints/
+runs/
+wandb/
+*.pt
+*.ckpt
+*.npz
+
+# Study results (results/budget*/) are small and stay tracked.

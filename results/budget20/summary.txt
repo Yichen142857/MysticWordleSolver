@@ -1,0 +1,164 @@
+| agent | cipher | N | games | full solve (95% CI) | per-target solve (95% CI) | guesses used | rejections/game | final cipher acc | identified after B-N | identified at end | s/game |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| exact | random | 4 | 20 | 0.95 (0.76-0.99) | 0.99 (0.96-1.00) | 17.9 | 0.0 | 0.88 | - | - | 158 |
+| exact | random | 5 | 20 | 0.90 (0.70-0.97) | 0.97 (0.93-1.00) | 19.1 | 0.0 | 0.87 | - | - | 192 |
+| exact | random | 6 | 20 | 1.00 (0.84-1.00) | 1.00 (1.00-1.00) | 19.4 | 0.0 | 0.89 | - | - | 138 |
+| exact | random | 7 | 20 | 0.85 (0.64-0.95) | 0.95 (0.88-1.00) | 21.4 | 0.0 | 0.90 | - | - | 164 |
+| exact | random | 8 | 20 | 0.90 (0.70-0.97) | 0.98 (0.95-1.00) | 21.4 | 0.0 | 0.87 | - | - | 151 |
+| particle | random | 4 | 20 | 0.00 (0.00-0.16) | 0.00 (0.00-0.00) | 24.0 | 0.0 | 0.08 | - | - | 108 |
+| particle | random | 5 | 20 | 0.00 (0.00-0.16) | 0.00 (0.00-0.00) | 25.0 | 0.0 | 0.05 | - | - | 108 |
+| particle | random | 6 | 20 | 0.00 (0.00-0.16) | 0.03 (0.00-0.05) | 26.0 | 0.0 | 0.08 | - | - | 114 |
+| particle | random | 7 | 20 | 0.00 (0.00-0.16) | 0.01 (0.00-0.02) | 27.0 | 0.0 | 0.06 | - | - | 201 |
+| particle | random | 8 | 20 | 0.00 (0.00-0.16) | 0.00 (0.00-0.00) | 28.0 | 0.0 | 0.08 | - | - | 238 |
+
+Per-target solve rate by target length:
+
+| agent | cipher | L=5 | L=6 | L=7 | L=8 | L=9 | L=10 |
+|---|---|---|---|---|---|---|---|
+| exact | random | 0.94 (84) | 0.98 (102) | 0.99 (109) | 0.99 (98) | 0.96 (102) | 0.99 (105) |
+| particle | random | 0.00 (84) | 0.00 (102) | 0.01 (109) | 0.01 (98) | 0.01 (102) | 0.01 (105) |
+
+Wins within a smaller budget B = N + e (from guess counts of won games):
+
+| agent | cipher | N | games | e=10 | e=12 | e=14 | e=16 | e=18 | e=20 |
+|---|---|---|---|---|---|---|---|---|---|
+| exact | random | 4 | 20 | 0.15 (0.05-0.36) | 0.40 (0.22-0.61) | 0.65 (0.43-0.82) | 0.75 (0.53-0.89) | 0.90 (0.70-0.97) | 0.95 (0.76-0.99) |
+| exact | random | 5 | 20 | 0.10 (0.03-0.30) | 0.55 (0.34-0.74) | 0.60 (0.39-0.78) | 0.70 (0.48-0.85) | 0.85 (0.64-0.95) | 0.90 (0.70-0.97) |
+| exact | random | 6 | 20 | 0.20 (0.08-0.42) | 0.35 (0.18-0.57) | 0.65 (0.43-0.82) | 0.85 (0.64-0.95) | 1.00 (0.84-1.00) | 1.00 (0.84-1.00) |
+| exact | random | 7 | 20 | 0.05 (0.01-0.24) | 0.35 (0.18-0.57) | 0.65 (0.43-0.82) | 0.75 (0.53-0.89) | 0.85 (0.64-0.95) | 0.85 (0.64-0.95) |
+| exact | random | 8 | 20 | 0.20 (0.08-0.42) | 0.35 (0.18-0.57) | 0.70 (0.48-0.85) | 0.90 (0.70-0.97) | 0.90 (0.70-0.97) | 0.90 (0.70-0.97) |
+| particle | random | 4 | 20 | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) |
+| particle | random | 5 | 20 | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) |
+| particle | random | 6 | 20 | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) |
+| particle | random | 7 | 20 | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) |
+| particle | random | 8 | 20 | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) | 0.00 (0.00-0.16) |
+
+exact N=4: 20 games (19 won)
+  first k unique per game: [12, 18, 16, 14, 16, 18, 16, 17, 16, 24, 13, 22, 14, 12, 10, 18, 'never', 16, 12, 14]
+  k= 6: unique 0/20
+  k= 8: unique 0/20
+  k=10: unique 1/20
+  k=12: unique 4/20
+  k=14: unique 8/20
+  k=16: unique 13/20
+  k=18: unique 17/20
+  k=20: unique 17/20
+  k=22: unique 18/20
+  k=24: unique 9/9
+  end : unique 19/20
+exact N=5: 20 games (18 won)
+  first k unique per game: [20, 16, 14, 16, 22, 25, 10, 20, 17, 17, 10, 16, 16, 23, 16, 'never', 14, 16, 10, 22]
+  k= 6: unique 0/20
+  k= 8: unique 0/20
+  k=10: unique 3/20
+  k=12: unique 3/20
+  k=14: unique 5/20
+  k=16: unique 11/20
+  k=18: unique 13/20
+  k=20: unique 15/20
+  k=22: unique 17/20
+  k=24: unique 15/17
+  end : unique 19/20
+exact N=6: 20 games (20 won)
+  first k unique per game: [20, 12, 18, 21, 18, 24, 12, 12, 22, 10, 22, 18, 16, 12, 19, 16, 21, 14, 24, 18]
+  k= 6: unique 0/15 (+5 timeout)
+  k= 8: unique 0/17 (+3 timeout)
+  k=10: unique 1/18 (+2 timeout)
+  k=12: unique 5/19 (+1 timeout)
+  k=14: unique 6/19 (+1 timeout)
+  k=16: unique 8/19 (+1 timeout)
+  k=18: unique 12/20
+  k=20: unique 14/20
+  k=22: unique 18/20
+  k=24: unique 18/18
+  end : unique 20/20
+exact N=7: 20 games (17 won)
+  first k unique per game: [21, 12, 18, 10, 12, 18, 19, 25, 'never', 16, 21, 20, 21, 10, 25, 18, 23, 'never', 10, 20]
+  k= 6: unique 0/18 (+2 timeout)
+  k= 8: unique 0/11 (+9 timeout)
+  k=10: unique 3/15 (+5 timeout)
+  k=12: unique 5/19 (+1 timeout)
+  k=14: unique 5/20
+  k=16: unique 6/19 (+1 timeout)
+  k=18: unique 9/20
+  k=20: unique 12/20
+  k=22: unique 15/20
+  k=24: unique 9/13
+  end : unique 18/20
+exact N=8: 20 games (18 won)
+  first k unique per game: [22, 14, 20, 'never', 21, 22, 8, 16, 21, 12, 21, 20, 'never', 14, 20, 22, 16, 12, 8, 12]
+  k= 6: unique 0/16 (+4 timeout)
+  k= 8: unique 2/15 (+5 timeout)
+  k=10: unique 2/15 (+5 timeout)
+  k=12: unique 5/18 (+2 timeout)
+  k=14: unique 7/19 (+1 timeout)
+  k=16: unique 9/20
+  k=18: unique 9/20
+  k=20: unique 12/20
+  k=22: unique 18/20
+  k=24: unique 9/11
+  end : unique 18/20
+particle N=4: 20 games (0 won)
+  first k unique per game: [16, 'never', 12, 12, 'never', 16, 18, 16, 14, 14, 'never', 'never', 18, 18, 14, 'never', 'never', 14, 16, 10]
+  k= 6: unique 0/20
+  k= 8: unique 0/19 (+1 timeout)
+  k=10: unique 1/20
+  k=12: unique 3/20
+  k=14: unique 7/20
+  k=16: unique 11/20
+  k=18: unique 14/20
+  k=20: unique 14/20
+  k=22: unique 14/20
+  end : unique 14/20
+particle N=5: 20 games (0 won)
+  first k unique per game: [10, 'never', 14, 12, 'never', 'never', 10, 10, 'never', 12, 12, 10, 12, 'never', 16, 'never', 12, 'never', 12, 'never']
+  k= 6: unique 0/20
+  k= 8: unique 0/16 (+4 timeout)
+  k=10: unique 4/19 (+1 timeout)
+  k=12: unique 10/19 (+1 timeout)
+  k=14: unique 10/19 (+1 timeout)
+  k=16: unique 12/20
+  k=18: unique 12/20
+  k=20: unique 12/20
+  k=22: unique 12/20
+  k=24: unique 12/20
+  end : unique 12/20
+particle N=6: 20 games (0 won)
+  first k unique per game: [12, 'never', 'never', 'never', 'never', 'never', 16, 14, 12, 'never', 'never', 18, 'never', 22, 'never', 14, 10, 'never', 'never', 18]
+  k= 6: unique 0/18 (+2 timeout)
+  k= 8: unique 0/16 (+4 timeout)
+  k=10: unique 1/14 (+6 timeout)
+  k=12: unique 3/16 (+4 timeout)
+  k=14: unique 5/18 (+2 timeout)
+  k=16: unique 6/17 (+3 timeout)
+  k=18: unique 8/19 (+1 timeout)
+  k=20: unique 8/19 (+1 timeout)
+  k=22: unique 9/19 (+1 timeout)
+  k=24: unique 8/19 (+1 timeout)
+  end : unique 8/19 (+1 timeout)
+particle N=7: 20 games (0 won)
+  first k unique per game: [12, 'never', 12, 8, 14, 8, 20, 'never', 'never', 20, 'never', 'never', 'never', 8, 22, 12, 'never', 14, 12, 14]
+  k= 6: unique 0/18 (+2 timeout)
+  k= 8: unique 3/9 (+11 timeout)
+  k=10: unique 3/12 (+8 timeout)
+  k=12: unique 7/19 (+1 timeout)
+  k=14: unique 10/19 (+1 timeout)
+  k=16: unique 10/20
+  k=18: unique 10/20
+  k=20: unique 12/20
+  k=22: unique 13/20
+  k=24: unique 13/20
+  end : unique 13/20
+particle N=8: 20 games (0 won)
+  first k unique per game: [10, 14, 12, 'never', 'never', 'never', 12, 12, 12, 12, 16, 'never', 'never', 12, 20, 10, 20, 10, 10, 8]
+  k= 6: unique 0/13 (+7 timeout)
+  k= 8: unique 1/9 (+11 timeout)
+  k=10: unique 5/16 (+4 timeout)
+  k=12: unique 11/20
+  k=14: unique 12/20
+  k=16: unique 13/20
+  k=18: unique 13/20
+  k=20: unique 15/20
+  k=22: unique 15/20
+  k=24: unique 15/20
+  end : unique 15/20

@@ -1,0 +1,101 @@
+{
+  "description": "Frozen MysticWordleSolver data. Pools are read from data/splits/*.txt.",
+  "source_word_list": {
+    "file": "data/raw_data.txt",
+    "name": "ENABLE (public domain)",
+    "sha256": "3f16130220645692ed49c7134e24a18504c2ca55b3c012f7290e3e77c63b1a89"
+  },
+  "words_tsv": {
+    "file": "data/words.tsv",
+    "sha256": "9a4931586a2f26dc5b7511d17775678f47f9366afad17dd21d94a0d2383100cf",
+    "frequency_source": "wordfreq Zipf frequency, English"
+  },
+  "settings": {
+    "word_lengths": [
+      5,
+      10
+    ],
+    "target_zipf_threshold": 3.0,
+    "split_ratios": {
+      "train": 0.8,
+      "val": 0.1,
+      "test": 0.1
+    },
+    "split_seed": 0,
+    "split_method": "per length group, numpy default_rng(seed).permutation, then train/val/test slices",
+    "target_length_weights": "equal probability per length group, uniform within a group (TargetSampler default)",
+    "evaluation_pool": "test",
+    "tuning_pool": "val"
+  },
+  "game_rules": {
+    "n_targets": [
+      4,
+      8
+    ],
+    "budget": "N + 16",
+    "max_rejections": 20
+  },
+  "counts": {
+    "guess_dictionary": {
+      "total": 120572,
+      "per_length": {
+        "5": 8636,
+        "6": 15232,
+        "7": 23109,
+        "8": 28420,
+        "9": 24873,
+        "10": 20302
+      }
+    },
+    "target_list": {
+      "total": 17724,
+      "per_length": {
+        "5": 2686,
+        "6": 3414,
+        "7": 3649,
+        "8": 3325,
+        "9": 2698,
+        "10": 1952
+      }
+    },
+    "train_pool": {
+      "total": 14179,
+      "per_length": {
+        "5": 2149,
+        "6": 2731,
+        "7": 2919,
+        "8": 2660,
+        "9": 2158,
+        "10": 1562
+      },
+      "file": "data/splits/train.txt",
+      "sha256": "5301389a4dbdc9dd7fda2649b7d9fc012940108dc31ab0bc6554e0477e764ff7"
+    },
+    "val_pool": {
+      "total": 1772,
+      "per_length": {
+        "5": 269,
+        "6": 341,
+        "7": 365,
+        "8": 332,
+        "9": 270,
+        "10": 195
+      },
+      "file": "data/splits/val.txt",
+      "sha256": "8ffd4b26fe368343067e5a1bcfb47da87e6f0cb0d389bb3d862464d3d263744f"
+    },
+    "test_pool": {
+      "total": 1773,
+      "per_length": {
+        "5": 268,
+        "6": 342,
+        "7": 365,
+        "8": 333,
+        "9": 270,
+        "10": 195
+      },
+      "file": "data/splits/test.txt",
+      "sha256": "3a6a669fb373282da21f395905f54760b77711add00c8c8e85f9ee8cde493e4f"
+    }
+  }
+}

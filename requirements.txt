@@ -1,0 +1,6 @@
+numpy>=1.24
+numba>=0.59      # compiled search kernels; without it they run as (very slow) Python
+ortools>=9.10    # CP-SAT, for the exact solver and the identifiability check
+pytest>=7
+# only needed to rebuild data/ with scripts/build_dictionary.py
+wordfreq>=3.0
